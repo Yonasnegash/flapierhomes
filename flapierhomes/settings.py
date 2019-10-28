@@ -32,6 +32,12 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
+    'listings.apps.ListingsConfig',
+    'realtors.apps.RealtorsConfig',
+    'realestates.apps.RealestatesConfig',
+    'hometype.apps.HometypeConfig',
+    'placetype.apps.PlacetypeConfig',
+    'nearbyplaces.apps.NearbyplacesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,8 +82,11 @@ WSGI_APPLICATION = 'flapierhomes.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'flapierhomes',
+        'USER': 'postgres',
+        'PASSWORD': 'toor',
+        'HOST': 'localhost'
     }
 }
 
