@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'realtors.apps.RealtorsConfig',
     'realestates.apps.RealestatesConfig',
     'hometype.apps.HometypeConfig',
+    'accounts.apps.AccountsConfig',
+    'contacts.apps.ContactsConfig',
     'placetype.apps.PlacetypeConfig',
     'nearbyplaces.apps.NearbyplacesConfig',
     'django.contrib.admin',
@@ -44,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +139,16 @@ STATICFILES_DIRS = [
 # Media Folder Settings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# Messages
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
+
+# Email config
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER= 'yonasessti@gmail.com'
+EMAIL_HOST_PASSWORD= 'yonasEssti91'
+EMAIL_USE_TLS=True
