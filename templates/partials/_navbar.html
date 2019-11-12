@@ -26,7 +26,7 @@
                                 <li class="active"><a href="{% url 'index' %}">Home</a></li>
                                 <li><a href="{% url 'about' %}">About</a></li>
                                 <li><a href="{% url 'listings' %}">Featured Listings</a></li>
-                                <li><a href="./blog.html">Blog</a></li>
+                                <li><a href="{% url 'contactus' %}">Contact</a></li>
                             </ul>
                             {% if user.is_authenticated %}
                                 <!-- Dashboard btn -->
