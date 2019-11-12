@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'contacts.apps.ContactsConfig',
     'placetype.apps.PlacetypeConfig',
     'nearbyplaces.apps.NearbyplacesConfig',
+    'subscription.apps.SubscriptionConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
