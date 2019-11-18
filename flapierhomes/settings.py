@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'placetype.apps.PlacetypeConfig',
     'nearbyplaces.apps.NearbyplacesConfig',
     'subscription.apps.SubscriptionConfig',
+    'help.apps.HelpConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
