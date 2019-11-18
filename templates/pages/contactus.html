@@ -22,7 +22,8 @@
     </div>
 </div>
 <!-- **** Breadcrumb Area End **** -->
-
+<!-- alerts -->
+{% include 'partials/_alerts.html' %}
 <!-- **** Contact Area Start **** -->
 <section class="rehomes-support-and-contact-area section-padding-80-0">
     <div class="container">
@@ -57,7 +58,7 @@
                         <div class="supprto-meta">
                             <h4>Yonas</h4>
                             <p>Customer Realations</p>
-                            <p>0920627352</p>
+                            <p>0928880027</p>
                             <p>yonas@etbets.com</p>
                         </div>
                     </div>
@@ -73,7 +74,8 @@
                     </div>
 
                     <!-- Form -->
-                    <form class="support-form" action="#" method="post">
+                    <form class="support-form" action="{% url 'help' %}" method="post">
+                            {% csrf_token %}
                         <div class="row">
                             <div class="col-12">
                                 <input type="text" name="message-name" class="form-control mb-20" placeholder="Your Name">
