@@ -30,7 +30,8 @@
             <div class="col-12">
                 <div class="about-us-title mb-40 wow fadeInUp" data-wow-delay="200ms">
                     <h2>Hello! Welcome to ኢቲ<span>bets.</span></h2>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p>Etbets is a commercial real-estate agent company. Established to give any service related to buying, selling, renting and consultancy starting from individual to real-estate homes. Etbets offers a comprehensive list of for-sale and for-rent properties, as well as the information and tools to make informed real estate decisions. 
+                    </p>
                 </div>
             </div>
 
@@ -42,7 +43,7 @@
                         <img src="{% static 'img/bg-img/about1.jpg' %}" alt="">
                     </div>
                     <h4>Our Company</h4>
-                    <p>Donec enim ipsum porta justo integer at velna vitae auctor integer congue magna at risus auctor purus unt pretium ligula rutrum integer sapien ultrice ligula luctus undo magna risus</p>
+                    <p>Offers a comprehensive list of for-sale, for-rent properties, as well as the information and tools to make informed real estate decisions. </p>
                 </div>
             </div>
 
@@ -54,7 +55,7 @@
                         <img src="{% static 'img/bg-img/about2.jpg' %}" alt="">
                     </div>
                     <h4>Our Vision</h4>
-                    <p>Donec enim ipsum porta justo integer at velna vitae auctor integer congue magna at risus auctor purus unt pretium ligula rutrum integer sapien ultrice ligula luctus undo magna risus</p>
+                    <p>Providing technological and advanced features for selling and buying homes. To become the leading real-estate broker in ethiopia.</p>
                 </div>
             </div>
 
@@ -66,7 +67,7 @@
                         <img src="{% static 'img/bg-img/about3.jpg' %}" alt="">
                     </div>
                     <h4>Our Quality</h4>
-                    <p>Donec enim ipsum porta justo integer at velna vitae auctor integer congue magna at risus auctor purus unt pretium ligula rutrum integer sapien ultrice ligula luctus undo magna risus</p>
+                    <p>We are Available 24/7 to satisfy our customers, fast response on messanger and telegram. Call us!</p>
                 </div>
             </div>
         </div>
@@ -74,78 +75,9 @@
 </section>
 <!-- **** About Us Area End **** -->
 
-<!-- **** Choose Us Area Start **** -->
-<section class="rehomes-choose-us-area section-padding-100-60">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-heading text-center wow fadeInUp" data-wow-delay="200ms">
-                    <h2><span>Why</span> Choose Us?</h2>
-                    <p>We have over 8 years of experience and knowledge on how to sell more.</p>
-                </div>
-            </div>
+    <!-- Choose us area -->
+    {% include 'partials/_chooseus.html' %}
 
-            <!-- Single choose us content -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="single-choose-us-content wow fadeInUp" data-wow-delay="200ms">
-                    <!-- Choose us Icon -->
-                    <div class="choose-us-icon">
-                        <i class="icon_search"></i>
-                    </div>
-                    <h5>Find Your Home</h5>
-                    <p>Quis ipsum suspendisse ultrices, risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                </div>
-            </div>
-
-            <!-- Single choose us content -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="single-choose-us-content wow fadeInUp" data-wow-delay="200ms">
-                    <!-- Choose us Icon -->
-                    <div class="choose-us-icon">
-                        <i class="icon_building"></i>
-                    </div>
-                    <h5>Transportation support</h5>
-                    <p>Quis ipsum suspendisse ultrices, risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                </div>
-            </div>
-
-            <!-- Single choose us content -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="single-choose-us-content wow fadeInUp" data-wow-delay="200ms">
-                    <!-- Choose us Icon -->
-                    <div class="choose-us-icon">
-                        <i class="icon_creditcard"></i>
-                    </div>
-                    <h5>Save Your Money</h5>
-                    <p>Quis ipsum suspendisse ultrices, risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-<!-- **** Choose Us Area End **** -->
-
-<!-- **** Partner Area Start **** -->
-<div class="partner-area wow fadeInUp" data-wow-delay="200ms">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="partner-logo-slide owl-carousel">
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo wow fadeInUp" data-wow-delay="100ms"><img src="{% static 'img/core-img/1.png' %}" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo wow fadeInUp" data-wow-delay="300ms"><img src="{% static 'img/core-img/2.png' %}" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo wow fadeInUp" data-wow-delay="500ms"><img src="{% static 'img/core-img/3.png' %}" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo wow fadeInUp" data-wow-delay="700ms"><img src="{% static 'img/core-img/4.png' %}" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo wow fadeInUp" data-wow-delay="900ms"><img src="{% static 'img/core-img/5.png' %}" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- **** Partner Area End **** -->
+<!-- Choose us area -->
+{% include 'partials/_partnership.html' %}
 {% endblock %}

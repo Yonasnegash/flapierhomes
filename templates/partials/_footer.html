@@ -12,7 +12,7 @@
                         <!-- Footer Logo -->
                         <a href="https://etbets.com" class="footer-logo"><img src="{% static 'img/core-img/logo-2.png' %}" alt="" width="150" height="150"></a>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                        <p>Etbets is a commercial real-estate agent company. Established to give any service related to buying, selling, renting and consultancy starting from individual to real-estate homes.</p>
                         <!-- Social Info -->
                         <div class="social-info">
                             <a href="https://www.facebook.com/etbets"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -33,7 +33,7 @@
                         <div class="footer-contact">
                             <p>Phone: <span>+251911595163</span></p>
                             <p>Email: <span>info@etbets.com</span></p>
-                            <p>Address: <span>Bole 22, Segen Building, Near Golagol</span></p>
+                            <!-- <p>Address: <span>Bole 22, Segen Building, Near Golagol</span></p> -->
                         </div>
                     </div>
                 </div>
@@ -66,8 +66,9 @@
 
                         <p>Subscribe our newsletter to get notification about new updates, count, etc.</p>
                         <!-- Newsletter Form -->
-                        <form action="index.html" class="nl-form">
-                            <input type="email" name="nl-email" class="form-control" placeholder="Enter your email...">
+                        <form action="{% url 'subscription' %}" method="POST" class="nl-form">
+                                {% csrf_token %}
+                            <input type="email" name="email" class="form-control" placeholder="Enter your email...">
                             <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                         </form>
                     </div>

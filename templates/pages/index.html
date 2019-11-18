@@ -4,6 +4,8 @@
 {% load humanize %}
 {% block title %} | Welcome {% endblock %}
 {% block content %}
+<!-- alerts -->
+{% include 'partials/_alerts.html' %}
 <!-- **** Properties Hero Area Start **** -->
 <div class="properties-hero-area d-flex flex-wrap align-items-center mb-80">
         {% if featured_listing %}
@@ -109,7 +111,7 @@
     </div>
     <!-- **** Properties Hero Area End **** -->
 <!-- alerts -->
-{% include 'partials/_alerts.html' %}
+<!-- {% include 'partials/_alerts.html' %} -->
     <!-- **** Location Search Form Area **** -->
     <div class="rehomes-search-form-area wow fadeInUp" data-wow-delay="200ms">
         <div class="container">
@@ -248,78 +250,9 @@
     </section>
     <!-- **** Sale Area End **** -->
 
-    <!-- **** Choose Us Area Start **** -->
-    <section class="rehomes-choose-us-area section-padding-100-60">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="200ms">
-                        <h2><span>Why</span> Choose Us?</h2>
-                        <p>We have greate experience and knowledge on how to sell more.</p>
-                    </div>
-                </div>
+    <!-- Choose us area -->
+{% include 'partials/_chooseus.html' %}
 
-                <!-- Single choose us content -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-choose-us-content wow fadeInUp" data-wow-delay="200ms">
-                        <!-- Choose us Icon -->
-                        <div class="choose-us-icon">
-                            <i class="icon_search"></i>
-                        </div>
-                        <h5>Find Your Home</h5>
-                        <p>Quis ipsum suspendisse ultrices, risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                    </div>
-                </div>
-
-                <!-- Single choose us content -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-choose-us-content wow fadeInUp" data-wow-delay="200ms">
-                        <!-- Choose us Icon -->
-                        <div class="choose-us-icon">
-                            <i class="icon_building"></i>
-                        </div>
-                        <h5>Transportation support</h5>
-                        <p>Quis ipsum suspendisse ultrices, risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                    </div>
-                </div>
-
-                <!-- Single choose us content -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-choose-us-content wow fadeInUp" data-wow-delay="200ms">
-                        <!-- Choose us Icon -->
-                        <div class="choose-us-icon">
-                            <i class="icon_creditcard"></i>
-                        </div>
-                        <h5>Save Your Money</h5>
-                        <p>Quis ipsum suspendisse ultrices, risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- **** Choose Us Area End **** -->
-
-    <!-- **** Partner Area Start **** -->
-    <div class="partner-area wow fadeInUp" data-wow-delay="200ms">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="partner-logo-slide owl-carousel">
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo wow fadeInUp" data-wow-delay="100ms"><img src="{% static 'img/core-img/1.png' %}" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo wow fadeInUp" data-wow-delay="300ms"><img src="{% static 'img/core-img/2.png' %}" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo wow fadeInUp" data-wow-delay="500ms"><img src="{% static 'img/core-img/3.png' %}" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo wow fadeInUp" data-wow-delay="700ms"><img src="{% static 'img/core-img/4.png' %}" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo wow fadeInUp" data-wow-delay="900ms"><img src="{% static 'img/core-img/5.png' %}" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- **** Partner Area End **** -->
+<!-- Choose us area -->
+{% include 'partials/_partnership.html' %}
 {% endblock %}
