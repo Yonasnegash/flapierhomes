@@ -40,6 +40,12 @@ def listing(request, listing_id):
 def search(request):
     queryset_list = Listing.objects.order_by('-list_date').filter(is_published=True)
 
+    # For rent
+    if 'forrent' in request.GET:
+        forrent = request.GET['forrent']
+        if forrent:
+            queryset_list = queryset_list.filter(is_for_rent=True)
+            
     # Keywords
     if 'keywords' in request.GET:
         keywords = request.GET['keywords']
