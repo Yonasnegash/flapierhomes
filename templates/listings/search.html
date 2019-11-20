@@ -12,18 +12,17 @@
                     <div class="row">
                         <div class="col-12 col-lg-10">
                             <div class="row">
-                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <div class="form-check">
+                                            <input type="checkbox" name="forrent" class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck1" style="color: white;"> Search for rent only</label>
+                                        </div>
+                                    </div>
+                                <div class="col-12 col-md-6 col-lg-3">
                                     <input type="text" name="keywords" class="form-control" placeholder="Keywords" value="{{ values.keywords }}">
                                 </div>
-                                <!-- <div class="col-12 col-md-6 col-lg-4">
-                                    <select name="types" id="types" class="form-control">
-                                        <option value="all-types">All Types</option>
-                                        {% for key, value in house_type.items %}
-                                            <option value="{{ key }}"> {{ value }}</option>
-                                        {% endfor %}
-                                    </select>
-                                </div> -->
-                                <div class="col-12 col-md-6 col-lg-4">
+                                
+                                <div class="col-12 col-md-6 col-lg-3">
                                     <select name="city" id="city" class="form-control">
                                         <option selected="true" disabled="disabled">City (All)</option>
                                         {% for key, value in city_choices.items %}
@@ -35,7 +34,7 @@
                                         {% endfor %}
                                     </select>
                                 </div>
-                                <div class="col-12 col-md-6 col-lg-4">
+                                <div class="col-12 col-md-6 col-lg-3">
                                     <select name="bedrooms" id="bedrooms" class="form-control">
                                         <option selected="true" disabled="disabled">Bedrooms (All)</option>
                                         {% for key, value in bedroom_choices.items %}
