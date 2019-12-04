@@ -154,3 +154,8 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER= 'yonasessti@gmail.com'
 EMAIL_HOST_PASSWORD= 'yonasEssti91'
 EMAIL_USE_TLS=True
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
