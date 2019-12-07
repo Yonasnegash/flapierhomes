@@ -9,78 +9,85 @@
         <div class="container">
             <div class="rehomes-search-form">
                 <form action="{% url 'search' %}">
-                        <div class="row">
-                                <div class="col-12 col-md-6 col-lg-3">
-                                    <div class="form-check">
-                                        <input type="checkbox" name="forrent" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1" style="color: white;"> Search for rent only</label>
+                    <div class="row">
+                        <div class="col-12 col-lg-10">
+                                <div class="row">
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <div class="form-check">
+                                                <input type="checkbox" name="forrent" class="form-check-input" id="exampleCheck1">
+                                                <label class="form-check-label" for="exampleCheck1" style="color: white;"> Search for rent only</label>
+                                            </div>
+                                        </div>
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <input type="text" name="keywords" class="form-control" placeholder="Keywords" value="{{ values.keywords }}">
+                                    </div>
+                                    
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <select name="city" id="city" class="form-control">
+                                            <option selected="true" disabled="disabled">City (All)</option>
+                                            {% for key, value in city_choices.items %}
+                                                <option value="{{ key }}"
+                                                {% if key == values.city %}
+                                                    selected
+                                                {% endif %}
+                                                > {{ value }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <select name="bedrooms" id="bedrooms" class="form-control">
+                                            <option selected="true" disabled="disabled">Bedrooms (All)</option>
+                                            {% for key, value in bedroom_choices.items %}
+                                                <option value="{{ key }}"
+                                                {% if key == values.bedrooms %}
+                                                    selected
+                                                {% endif %}
+                                                > {{ value }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <select name="bathrooms" id="bathrooms" class="form-control">
+                                            <option selected="true" disabled="disabled">Bathrooms (All)</option>
+                                            {% for key, value in bathroom_choices.items %}
+                                                <option value="{{ key }}"
+                                                {% if key == values.bathrooms %}
+                                                    selected
+                                                {% endif %}
+                                                > {{ value }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                            <select name="price" id="price" class="form-control">
+                                                <option selected="true" disabled="disabled">Price (All)</option>
+                                                {% for key, value in price_choices.items %}
+                                                    <option value="{{ key }}"
+                                                    {% if key == values.price %}
+                                                    selected
+                                                    {% endif %}
+                                                    > {{ value }}</option>
+                                                {% endfor %}
+                                            </select>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                            <select name="sqft" id="sqft" class="form-control">
+                                                <option selected="true" disabled="disabled">Sqft (All)</option>
+                                                {% for key, value in sqft_choices.items %}
+                                                    <option value="{{ key }}"
+                                                    {% if key == values.sqft %}
+                                                    selected
+                                                    {% endif %}
+                                                    > {{ value }}</option>
+                                                {% endfor %}
+                                            </select>
                                     </div>
                                 </div>
-                            <div class="col-12 col-md-6 col-lg-3">
-                                <input type="text" name="keywords" class="form-control" placeholder="Keywords" value="{{ values.keywords }}">
-                            </div>
-                            
-                            <div class="col-12 col-md-6 col-lg-3">
-                                <select name="city" id="city" class="form-control">
-                                    <option selected="true" disabled="disabled">City (All)</option>
-                                    {% for key, value in city_choices.items %}
-                                        <option value="{{ key }}"
-                                        {% if key == values.city %}
-                                            selected
-                                        {% endif %}
-                                        > {{ value }}</option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-3">
-                                <select name="bedrooms" id="bedrooms" class="form-control">
-                                    <option selected="true" disabled="disabled">Bedrooms (All)</option>
-                                    {% for key, value in bedroom_choices.items %}
-                                        <option value="{{ key }}"
-                                        {% if key == values.bedrooms %}
-                                            selected
-                                        {% endif %}
-                                        > {{ value }}</option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-4">
-                                <select name="bathrooms" id="bathrooms" class="form-control">
-                                    <option selected="true" disabled="disabled">Bathrooms (All)</option>
-                                    {% for key, value in bathroom_choices.items %}
-                                        <option value="{{ key }}"
-                                        {% if key == values.bathrooms %}
-                                            selected
-                                        {% endif %}
-                                        > {{ value }}</option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-4">
-                                    <select name="price" id="price" class="form-control">
-                                        <option selected="true" disabled="disabled">Price (All)</option>
-                                        {% for key, value in price_choices.items %}
-                                            <option value="{{ key }}"
-                                            {% if key == values.price %}
-                                            selected
-                                            {% endif %}
-                                            > {{ value }}</option>
-                                        {% endfor %}
-                                    </select>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-4">
-                                    <select name="sqft" id="sqft" class="form-control">
-                                        <option selected="true" disabled="disabled">Sqft (All)</option>
-                                        {% for key, value in sqft_choices.items %}
-                                            <option value="{{ key }}"
-                                            {% if key == values.sqft %}
-                                            selected
-                                            {% endif %}
-                                            > {{ value }}</option>
-                                        {% endfor %}
-                                    </select>
-                            </div>
                         </div>
+                        <div class="col-12 col-lg-2">
+                            <button type="submit" class="btn rehomes-search-btn">Search</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
