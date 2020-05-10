@@ -3,6 +3,8 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from listings.choices import price_choices, bedroom_choices, bathroom_choices, city_choices, sqft_choices
 from .models import Listing
 from hometype.models import HomeType
+from rest_framework import viewsets
+from .serializer import ListingSerializer
 
 def index(request):
     listings = Listing.objects.order_by('-list_date').filter(is_published=True)
@@ -92,3 +94,7 @@ def search(request):
         'values': request.GET
     }
     return render(request, 'listings/search.html', context)
+
+class ListingAPI(viewsets.ModelViewSet):
+    queryset = Listing.objects.all()
+    serializer_class = ListingSerializer
